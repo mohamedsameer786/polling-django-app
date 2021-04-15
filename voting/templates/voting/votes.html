@@ -1,0 +1,29 @@
+<!-- Compiled and minified CSS -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+<style>
+
+    .vote{
+       display: block;
+       margin-left: auto;
+       margin-right: auto;
+       width: 30%;
+    }
+    body{
+        background-color: 	#FFC0CB;
+    }
+</style>
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<form action="results" method="post" class="vote">
+   {% csrf_token %}
+  <h4>Do you want to vote for {{name}}</h4><br>
+  <input type="submit" value="VOTE" class="btn btn-info"><br><br>
+  <a class="waves-effect waves-light btn-small" href="/" >NO</a>
+</form>
+
+</body>
+</html>
